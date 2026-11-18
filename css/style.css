@@ -174,10 +174,93 @@ h4{
 __________________________________________________*/
 footer{
     clear: both;
-    padding: 20px 0 30px 0;
-    text-align: center;
-    background: url(../img/fundo-rodape.png) no-repeat;
-    
+    margin-top: 30px;
+    padding: 0 32px;
+    color: #f4f2ec;
+    background: #29271f;
+    border-top: 4px solid #af670a;
+}
+
+.rodape-conteudo {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 48px;
+    padding: 32px 0;
+}
+
+.rodape-logo {
+    display: inline-block;
+    color: #f4f2ec;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.rodape-logo span {
+    color: #c18a32;
+}
+
+.rodape-marca p {
+    margin: 10px 0 0;
+    color: #c8c3b5;
+}
+
+.rodape-links {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px 22px;
+}
+
+.rodape-links h2 {
+    grid-column: 1 / -1;
+    margin: 0 0 2px;
+    color: #c18a32;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.rodape-links a {
+    color: #f4f2ec;
+}
+
+.rodape-links a:hover,
+.rodape-links a:focus,
+.rodape-logo:hover,
+.rodape-logo:focus {
+    color: #d7a64e;
+    text-decoration: underline;
+}
+
+.voltar-topo {
+    padding: 10px 14px;
+    color: #f4f2ec;
+    border: 1px solid #8e8879;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.voltar-topo:hover,
+.voltar-topo:focus {
+    color: #29271f;
+    background: #d7a64e;
+    border-color: #d7a64e;
+}
+
+.rodape-base {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+    color: #c8c3b5;
+    border-top: 1px solid #514d42;
+    font-size: 11px;
+}
+
+.rodape-base p {
+    margin: 0;
 }
 
 /*Formulários
@@ -262,5 +345,27 @@ legend{
         float: none;
         width: auto;
         margin: 20px 0 0;
+    }
+
+    footer {
+        padding: 0 20px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .rodape-links {
+        justify-content: start;
+    }
+
+    .voltar-topo {
+        justify-self: start;
+    }
+
+    .rodape-base {
+        flex-direction: column;
+        gap: 8px;
     }
 }
